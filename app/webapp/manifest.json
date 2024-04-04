@@ -1,0 +1,103 @@
+{
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "deviceTypes": {
+            "phone": true,
+            "desktop": true,
+            "tablet": true
+        }
+    },
+    "_version": "1.8.0",
+    "sap.app": {
+        "id": "reclamo",
+        "type": "application",
+        "title": "Browse Cccomplaints",
+        "description": "Sample Application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "dataSources": {
+            "CatalogService": {
+                "uri": "/catalog/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui5": {
+        "contentDensities": {
+            "cozy": true,
+            "compact": true
+        },
+        "dependencies": {
+            "minUI5Version": "",
+            "libs": {}
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "": {
+                "dataSource": "CatalogService",
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true,
+                    "groupProperties": {
+                        "default": {
+                            "submit": "Auto"
+                        }
+                    }
+                }
+            }
+        },
+        "routing": {
+            "routes": [{
+                    "pattern": "",
+                    "name": "ComplaintList",
+                    "target": "ComplaintList"
+                },
+                {
+                    "pattern": "Complaints({key})",
+                    "name": "ComplaintsDetails",
+                    "target": "ComplaintDetails"
+                }
+            ],
+            "targets": {
+                "ComplaintList": {
+                    "type": "Component",
+                    "id": "ComplaintList",
+                    "name": "sap.fe.templates.ListReport",
+                    "options": {
+                        "settings": {
+                            "entitySet": "Complaints",
+                            "navigation": {
+                                "Resolution": {
+                                    "detail": {
+                                        "route": "ComplaintDetails"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ComplaintsDetails": {
+                    "type": "Component",
+                    "id": "ComplaintsDetails",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "entitySet": "Complaints"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
