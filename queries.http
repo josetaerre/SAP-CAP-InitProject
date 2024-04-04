@@ -1,4 +1,10 @@
 
+GET http://localhost:4004/odata/v4/catalog/Status
+
+###
+GET http://localhost:4004/odata/v4/catalog/Stores
+
+###
 GET http://localhost:4004/odata/v4/catalog/Complaints
 
 ###
@@ -23,7 +29,7 @@ Content-Type: application/json
     "accepted": false,
     "description": "It comes like that from China",
     "complaint": {
-        "ID": "cef298b2-a40c-4b9e-9417-e7072dfdedb4"
+        "ID": "377a9802-3fc1-4829-9466-6234b1d0b035"
     }
 }
 
@@ -33,7 +39,7 @@ Content-Type: application/json
 
 {
     "complaint": {
-        "ID": "cef298b2-a40c-4b9e-9417-e7072dfdedb4"
+        "ID": "377a9802-3fc1-4829-9466-6234b1d0b035"
     }
 }
 

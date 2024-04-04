@@ -1,0 +1,159 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "projectcomplaints",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.13.1",
+      "toolsId": "ea97082c-32d3-4ebe-9094-9ef5719e248a"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/catalog/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.122.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "projectcomplaints.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ComplaintsList",
+          "target": "ComplaintsList"
+        },
+        {
+          "pattern": "Complaints({key}):?query:",
+          "name": "ComplaintsObjectPage",
+          "target": "ComplaintsObjectPage"
+        },
+        {
+          "pattern": "Complaints({key})/resolutions({key2}):?query:",
+          "name": "ResolutionsObjectPage",
+          "target": "ResolutionsObjectPage"
+        }
+      ],
+      "targets": {
+        "ComplaintsList": {
+          "type": "Component",
+          "id": "ComplaintsList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/Complaints",
+              "variantManagement": "Page",
+              "navigation": {
+                "Complaints": {
+                  "detail": {
+                    "route": "ComplaintsObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ComplaintsObjectPage": {
+          "type": "Component",
+          "id": "ComplaintsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Complaints",
+              "navigation": {
+                "resolutions": {
+                  "detail": {
+                    "route": "ResolutionsObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ResolutionsObjectPage": {
+          "type": "Component",
+          "id": "ResolutionsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Complaints/resolutions"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}

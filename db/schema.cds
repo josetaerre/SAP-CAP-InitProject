@@ -7,7 +7,7 @@ using {
 
 entity Complaints : cuid, managed {
     title       : String;
-    status      : String;
+    status      : Int16;
     store       : String;
     resolutions : Association to many Resolutions;
     mediaFiles  : Association to many Media;
@@ -42,4 +42,15 @@ entity Object : cuid {
     @Core.MediaType: mediaType  @Core.ContentDisposition.Filename: filename  data : LargeBinary;
     @Core.IsMediaType mediaType                                                   : String;
     filename                                                                      : String;
+}
+
+entity Stores {
+    key ID: String;
+    name: String;
+    address: String   
+}
+
+entity Status {
+    key ID: Int16;
+    description: String;
 }

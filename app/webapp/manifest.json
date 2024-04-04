@@ -12,7 +12,7 @@
     "sap.app": {
         "id": "reclamo",
         "type": "application",
-        "title": "Browse Cccomplaints",
+        "title": "Browse Ccomplaints",
         "description": "Sample Application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -35,7 +35,7 @@
         },
         "dependencies": {
             "minUI5Version": "",
-            "libs": {}
+            "libs": { "sap.fe.templates": {} }
         },
         "models": {
             "i18n": {
@@ -60,19 +60,19 @@
         "routing": {
             "routes": [{
                     "pattern": "",
-                    "name": "ComplaintList",
-                    "target": "ComplaintList"
+                    "name": "Complaints",
+                    "target": "Complaints"
                 },
                 {
-                    "pattern": "Complaints({key})",
-                    "name": "ComplaintsDetails",
-                    "target": "ComplaintDetails"
+                    "pattern": "Complaint({key})",
+                    "name": "Details",
+                    "target": "Details"
                 }
             ],
             "targets": {
-                "ComplaintList": {
+                "Complaints": {
                     "type": "Component",
-                    "id": "ComplaintList",
+                    "id": "Complaints",
                     "name": "sap.fe.templates.ListReport",
                     "options": {
                         "settings": {
@@ -80,16 +80,16 @@
                             "navigation": {
                                 "Resolution": {
                                     "detail": {
-                                        "route": "ComplaintDetails"
+                                        "route": "Details"
                                     }
                                 }
                             }
                         }
                     }
                 },
-                "ComplaintsDetails": {
+                "Details": {
                     "type": "Component",
-                    "id": "ComplaintsDetails",
+                    "id": "Details",
                     "name": "sap.fe.templates.ObjectPage",
                     "options": {
                         "settings": {
