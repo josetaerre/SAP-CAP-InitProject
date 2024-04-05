@@ -1,9 +1,10 @@
 namespace my.complaints;
 
-using {
-    cuid,
-    managed
-} from '@sap/cds/common';
+using { cuid, managed } from '@sap/cds/common';
+using { Country } from '@sap/cds/common';
+using { Language } from '@sap/cds/common';
+// type Currency : Association to sap.common.Currencies;
+ type storeId : String(4);
 
 entity Complaints : cuid, managed {
     title       : String;
@@ -19,7 +20,6 @@ entity Resolutions : cuid, managed {
     complaint   : Association to one Complaints
                       on complaint.resolutions = $self;
 }
-
 
 entity Pictures {
     key ID      : UUID;
@@ -37,7 +37,6 @@ entity Media : cuid, managed {
     // fileName: String;
 }
 
-
 entity Object : cuid {
     @Core.MediaType: mediaType  @Core.ContentDisposition.Filename: filename  data : LargeBinary;
     @Core.IsMediaType mediaType                                                   : String;
@@ -45,12 +44,14 @@ entity Object : cuid {
 }
 
 entity Stores {
-    key ID: String;
+    key ID: storeId;
     name: String;
-    address: String   
+    address: String;
+    country : Country;
 }
 
 entity Status {
     key ID: Int16;
     description: String;
+    Language: Language
 }

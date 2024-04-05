@@ -8,18 +8,19 @@ GET http://localhost:4004/odata/v4/catalog/Stores
 GET http://localhost:4004/odata/v4/catalog/Complaints
 
 ###
-GET http://localhost:4004/odata/v4/catalog/Resolutions
-
-###
 POST http://localhost:4004/odata/v4/catalog/Complaints
 Content-Type: application/json
 
 {
     "title": "Too expensive merchandise",
-    "status": "1",
+    "status": 10,
     "store": "1000",
-    "resolutions": null
+    "resolutions": null,
+    "mediaFiles": null
 }
+
+###
+GET http://localhost:4004/odata/v4/catalog/Resolutions
 
 ###
 POST http://localhost:4004/odata/v4/catalog/Resolutions
