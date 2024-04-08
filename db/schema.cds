@@ -17,8 +17,7 @@ entity Complaints : cuid, managed {
 entity Resolutions : cuid, managed {
     accepted    : Boolean;
     description : String;
-    complaint   : Association to one Complaints
-                      on complaint.resolutions = $self;
+    complaint   : Association to one Complaints on complaint.resolutions = $self;
 }
 
 entity Pictures {
