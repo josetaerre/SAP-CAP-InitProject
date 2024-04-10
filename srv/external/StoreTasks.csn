@@ -4,13 +4,13 @@
  },
  "$version": "2.0",
  "definitions": {
-  "sap_metadata_edmx": {
+  "StoreTasks": {
    "kind": "service",
    "@cds.external": true,
    "@m.IsDefaultEntityContainer": "true",
    "@sap.supported.formats": "atom json xlsx"
   },
-  "sap_metadata_edmx.CustomerSet": {
+  "StoreTasks.DepartmentSet": {
    "kind": "entity",
    "@cds.external": true,
    "@cds.persistence.skip": true,
@@ -24,371 +24,8 @@
     "Number": {
      "key": true,
      "type": "cds.String",
-     "length": 10,
+     "length": 18,
      "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Name": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Email": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Telephone": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Type": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Parent": {
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreSurveySet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "ReviewTask",
-   "elements": {
-    "DmNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "DM Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.label": "Store Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SurveyGuid": {
-     "type": "cds.String",
-     "length": 13,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey GUID",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Status": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Task Status",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Type": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Type",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ChangedOn": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Task Changing Date",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ValidTo": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Valid To Date",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Name": {
-     "type": "cds.String",
-     "length": 35,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Description": {
-     "type": "cds.String",
-     "length": 150,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Description",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Questions": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreSurQuestionSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Questions",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Questions",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Questions",
-        "DmNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "DmNumber"
-       ]
-      }
-     ]
-    },
-    "Attachments": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreSurAttachmentSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Attachments",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "DmNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "DmNumber"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      }
-     ]
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreSurAnswerSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "ReviewTaskAnswer",
-   "elements": {
-    "DmNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Dm Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.label": "Store Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "AnswerId": {
-     "key": true,
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Answer Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Sequence": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Sequence",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
      "@sap.sortable": "false",
@@ -396,1584 +33,6 @@
      "notNull": true
     },
     "Text": {
-     "type": "cds.String",
-     "length": 80,
-     "@sap.unicode": "false",
-     "@sap.label": "Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreSurAttachmentSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "ReviewTaskAttachment",
-   "elements": {
-    "DmNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Dm Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.label": "Store Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileType": {
-     "key": true,
-     "type": "cds.String",
-     "length": 2,
-     "@sap.unicode": "false",
-     "@sap.label": "File Type",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileName": {
-     "type": "cds.String",
-     "length": 50,
-     "@sap.unicode": "false",
-     "@sap.label": "File Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "MimeType": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Mime Type",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "blob": {
-     "type": "cds.LargeBinary",
-     "@Core.MediaType": "application/octet-stream"
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreSurQuestionSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "ReviewTaskQuestion",
-   "elements": {
-    "DmNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Dm Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.label": "Store Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategorySequence": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Category Sequence",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryText": {
-     "type": "cds.String",
-     "length": 80,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionType": {
-     "type": "cds.String",
-     "length": 2,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Type",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionSequence": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Question Sequence",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionText": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Question Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionShortText": {
-     "type": "cds.String",
-     "length": 15,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Short Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Answer": {
-     "type": "cds.String",
-     "length": 255,
-     "@sap.unicode": "false",
-     "@sap.label": "Answer",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SelectableAnswer": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Selectable Answer",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "DecimalPlaces": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Decimal Places",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Status": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.label": "Status",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "RejectedComments": {
-     "type": "cds.String",
-     "length": 255,
-     "@sap.unicode": "false",
-     "@sap.label": "Rejected Comments",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ChangedOn": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Changed On",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Answers": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreSurAnswerSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Answers",
-        "QuestionId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "QuestionId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Answers",
-        "CategoryId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "CategoryId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Answers",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Answers",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Answers",
-        "DmNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "DmNumber"
-       ]
-      }
-     ]
-    },
-    "Attachments": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreSurQuestionAttSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Attachments",
-        "QuestionId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "QuestionId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "CategoryId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "CategoryId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "DmNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "DmNumber"
-       ]
-      }
-     ]
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreSurQuestionAttSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "ReviewTaskQuestionAttachment",
-   "elements": {
-    "DmNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Dm Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.label": "Store Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SequenceId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 14,
-     "@sap.unicode": "false",
-     "@sap.label": "Sequence Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileType": {
-     "type": "cds.String",
-     "length": 2,
-     "@sap.unicode": "false",
-     "@sap.label": "File Type",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileName": {
-     "type": "cds.String",
-     "length": 70,
-     "@sap.unicode": "false",
-     "@sap.label": "File Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "MimeType": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Mime Type",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "blob": {
-     "type": "cds.LargeBinary",
-     "@Core.MediaType": "application/octet-stream"
-    }
-   }
-  },
-  "sap_metadata_edmx.SurveySet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "DM Survey",
-   "elements": {
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Status": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Task Status",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Type": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Task",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ChangedOn": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Task Changing Date",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "ValidFrom": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Valid From Date",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ValidTo": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Valid To Date",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "InternalName": {
-     "type": "cds.String",
-     "length": 35,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Internal Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Name": {
-     "type": "cds.String",
-     "length": 35,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Description": {
-     "type": "cds.String",
-     "length": 150,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Description",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "PrefaceQuestion": {
-     "type": "cds.String",
-     "length": 80,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Preface Question",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "PrefaceAnswered": {
-     "type": "cds.Boolean",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Preface Answered",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "DelayDays": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Delay Days",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CurrentAttempt": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Current Attempt",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "NumberOfAttempts": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Number Of Attemps",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Categories": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.SurveyCategorySet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Categories",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      }
-     ]
-    },
-    "Questions": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.SurveyQuestionSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Questions",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      }
-     ]
-    },
-    "Attachments": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.SurveyAttachmentSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Attachments",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      }
-     ]
-    }
-   }
-  },
-  "sap_metadata_edmx.SurveyAnswerSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "DM Survey Answer",
-   "elements": {
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "AnswerId": {
-     "key": true,
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Answer id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SurveyGuid": {
-     "type": "cds.String",
-     "length": 13,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey GUID",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Sequence": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Sequence",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Text": {
-     "type": "cds.String",
-     "length": 80,
-     "@sap.unicode": "false",
-     "@sap.label": "Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.SurveyAttachmentSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "DM Survey Attachment",
-   "elements": {
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileType": {
-     "key": true,
-     "type": "cds.String",
-     "length": 2,
-     "@sap.unicode": "false",
-     "@sap.label": "File Type",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SurveyGuid": {
-     "type": "cds.String",
-     "length": 13,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey GUID",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileName": {
-     "type": "cds.String",
-     "length": 50,
-     "@sap.unicode": "false",
-     "@sap.label": "File Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "MimeType": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Mime Type",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "blob": {
-     "type": "cds.LargeBinary",
-     "@Core.MediaType": "application/octet-stream"
-    }
-   }
-  },
-  "sap_metadata_edmx.SurveyCategorySet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "DM Survey Category",
-   "elements": {
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SurveyGuid": {
-     "type": "cds.String",
-     "length": 13,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey GUID",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Sequence": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Sequence",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Text": {
-     "type": "cds.String",
-     "length": 80,
-     "@sap.unicode": "false",
-     "@sap.label": "Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Questions": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.SurveyQuestionSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Questions",
-        "CategoryId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "CategoryId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Questions",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      }
-     ]
-    }
-   }
-  },
-  "sap_metadata_edmx.SurveyQuestionSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "DM Survey Question",
-   "elements": {
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SurveyGuid": {
-     "type": "cds.String",
-     "length": 13,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey GUID",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionType": {
-     "type": "cds.String",
-     "length": 2,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Type",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Text": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ShortText": {
-     "type": "cds.String",
-     "length": 15,
-     "@sap.unicode": "false",
-     "@sap.label": "Short Text",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Answer": {
-     "type": "cds.String",
-     "length": 255,
-     "@sap.unicode": "false",
-     "@sap.label": "Answer",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "AnswerNumeric": {
-     "type": "cds.Double",
-     "@sap.unicode": "false",
-     "@sap.label": "Numeric Answer",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Sequence": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Sequence",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "MinValue": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Min Value",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "MaxValue": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Max Value",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SelectableAnswer": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Selectable Answer",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionIdDependency": {
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id Dependency",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "AnswerIdDependency": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Answer Id Dependency",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "AcceptDecimals": {
-     "type": "cds.Boolean",
-     "@sap.unicode": "false",
-     "@sap.label": "Accept Decimals",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "DecimalPlaces": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Decimal Places",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Status": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.label": "Status",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ChangedOn": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Changed On",
-     "@sap.creatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "Attachments": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.SurveyQuestionAttachmentSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Attachments",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "QuestionId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "QuestionId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Attachments",
-        "CategoryId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "CategoryId"
-       ]
-      }
-     ]
-    },
-    "Answers": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.SurveyAnswerSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Answers",
-        "QuestionId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "QuestionId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Answers",
-        "CategoryId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "CategoryId"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Answers",
-        "TaskId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskId"
-       ]
-      }
-     ]
-    }
-   }
-  },
-  "sap_metadata_edmx.SurveyQuestionAttachmentSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "DM Survey Question Attachment",
-   "elements": {
-    "TaskId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CategoryId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Category Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "QuestionId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Question Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "SequenceId": {
-     "key": true,
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Sequence Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FileName": {
-     "type": "cds.String",
-     "length": 70,
-     "@sap.unicode": "false",
-     "@sap.label": "File Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "CreatedOn": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Created On",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "MimeType": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.label": "Mime Type",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "blob": {
-     "type": "cds.LargeBinary",
-     "@Core.MediaType": "application/octet-stream"
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreTaskSurveySet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "Survey Store Tasks",
-   "elements": {
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.label": "Store Number",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "HeaderId": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskID": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Id",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Name": {
-     "type": "cds.String",
-     "length": 35,
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Name",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ValidTo": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Survey Valid To Date",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Progress": {
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.label": "Task Progress",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreTaskItemSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "Store Task Item",
-   "elements": {
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskID": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ItemNumber": {
-     "key": true,
      "type": "cds.String",
      "length": 40,
      "@sap.unicode": "false",
@@ -1982,8 +41,32 @@
      "@sap.sortable": "false",
      "@sap.filterable": "false",
      "notNull": true
+    }
+   }
+  },
+  "StoreTasks.EmployeeSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Number": {
+     "key": true,
+     "type": "cds.String",
+     "length": 8,
+     "@sap.unicode": "false",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
     },
-    "Headline": {
+    "FirstName": {
      "type": "cds.LargeString",
      "@sap.unicode": "false",
      "@sap.creatable": "false",
@@ -1992,7 +75,7 @@
      "@sap.filterable": "false",
      "notNull": true
     },
-    "Subheadline": {
+    "LastName": {
      "type": "cds.LargeString",
      "@sap.unicode": "false",
      "@sap.creatable": "false",
@@ -2001,8 +84,9 @@
      "@sap.filterable": "false",
      "notNull": true
     },
-    "Footer": {
-     "type": "cds.LargeString",
+    "StoreNumber": {
+     "type": "cds.String",
+     "length": 4,
      "@sap.unicode": "false",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
@@ -2010,7 +94,7 @@
      "@sap.filterable": "false",
      "notNull": true
     },
-    "Status": {
+    "Position": {
      "type": "cds.String",
      "length": 1,
      "@sap.unicode": "false",
@@ -2019,71 +103,97 @@
      "@sap.sortable": "false",
      "@sap.filterable": "false",
      "notNull": true
-    },
-    "Substatus": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Date": {
-     "type": "cds.DateTime",
-     "@odata.Type": "Edm.DateTimeOffset",
-     "@sap.unicode": "false",
-     "@sap.label": "Time Stamp",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false"
-    },
-    "SectionTitle": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Items": {
-     "@sap.label": "Header to Items",
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreTaskHeaderSet",
-     "on": [
-      {
-       "ref": [
-        "Items",
-        "ID"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "TaskID"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Items",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      }
-     ]
     }
    }
   },
-  "sap_metadata_edmx.StoreSet": {
+  "StoreTasks.ArticleStatusSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Code": {
+     "key": true,
+     "type": "cds.String",
+     "length": 2,
+     "@sap.unicode": "false",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 25,
+     "@sap.unicode": "false",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.MerchandiseCategorySet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Code": {
+     "key": true,
+     "type": "cds.String",
+     "length": 9,
+     "@sap.unicode": "false",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 20,
+     "@sap.unicode": "false",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DepartmentNumber": {
+     "type": "cds.LargeString",
+     "@sap.unicode": "false",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "IsPerishable": {
+     "type": "cds.Boolean",
+     "@sap.unicode": "false",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.StoreSet": {
    "kind": "entity",
    "@cds.external": true,
    "@cds.persistence.skip": true,
@@ -2102,6 +212,7 @@
      "@sap.creatable": "false",
      "@sap.updatable": "false",
      "@sap.sortable": "false",
+     "@sap.filterable": "false",
      "notNull": true
     },
     "Name": {
@@ -2156,7 +267,7 @@
     },
     "Currency": {
      "type": "cds.String",
-     "length": 3,
+     "length": 5,
      "@sap.unicode": "false",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
@@ -2164,277 +275,8 @@
      "@sap.filterable": "false",
      "notNull": true
     },
-    "Telephone": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "DmNumber": {
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Employees": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.EmployeeSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Employees",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "Number"
-       ]
-      }
-     ]
-    },
-    "Tasks": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreTaskHeaderSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Tasks",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "Number"
-       ]
-      }
-     ]
-    }
-   }
-  },
-  "sap_metadata_edmx.EmployeeSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "elements": {
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "notNull": true
-    },
-    "Number": {
-     "key": true,
-     "type": "cds.String",
-     "length": 8,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "FirstName": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "LastName": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Position": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.DistrictManagerSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "elements": {
-    "Number": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Name": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Email": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Telephone": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.StoreTaskHeaderSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "@sap.label": "Store Task Header",
-   "elements": {
-    "StoreNumber": {
-     "key": true,
-     "type": "cds.String",
-     "length": 4,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "ID": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskType": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Headline": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Subheadline": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Footnote": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StatusCode": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Substatus": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Order": {
+    "DiscrepancyQuantity": {
      "type": "cds.Integer",
-     "@sap.unicode": "false",
      "@sap.label": "Signed INT2 / int16",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
@@ -2442,126 +284,18 @@
      "@sap.filterable": "false",
      "notNull": true
     },
-    "GroupByItems": {
-     "type": "cds.Boolean",
-     "@sap.unicode": "false",
-     "@sap.label": "Indicator",
+    "DiscrepancyPercentage": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
      "@sap.sortable": "false",
      "@sap.filterable": "false",
      "notNull": true
-    },
-    "Articles": {
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreTaskArticleSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Articles",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Articles",
-        "TaskID"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "ID"
-       ]
-      }
-     ]
-    },
-    "Items": {
-     "@sap.label": "To Items",
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreTaskItemSet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Items",
-        "TaskID"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "ID"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Items",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      }
-     ]
-    },
-    "Surveys": {
-     "@sap.label": "To Surveys",
-     "@cds.ambiguous": "missing on condition?",
-     "type": "cds.Association",
-     "target": "sap_metadata_edmx.StoreTaskSurveySet",
-     "cardinality": {
-      "max": "*"
-     },
-     "on": [
-      {
-       "ref": [
-        "Surveys",
-        "StoreNumber"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "StoreNumber"
-       ]
-      },
-      "and",
-      {
-       "ref": [
-        "Surveys",
-        "HeaderId"
-       ]
-      },
-      "=",
-      {
-       "ref": [
-        "ID"
-       ]
-      }
-     ]
     }
    }
   },
-  "sap_metadata_edmx.StoreTaskArticleSet": {
+  "StoreTasks.SeasonSet": {
    "kind": "entity",
    "@cds.external": true,
    "@cds.persistence.skip": true,
@@ -2572,42 +306,12 @@
    "@sap.addressable": "false",
    "@sap.content.version": "1",
    "elements": {
-    "StoreNumber": {
+    "Category": {
      "key": true,
      "type": "cds.String",
      "length": 4,
      "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "TaskID": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Number": {
-     "key": true,
-     "type": "cds.String",
-     "length": 18,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Label": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
+     "@sap.label": "Season",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
      "@sap.sortable": "false",
@@ -2615,57 +319,7 @@
      "notNull": true
     },
     "Text": {
-     "type": "cds.String",
-     "length": 40,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Footnote": {
      "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "StatusCode": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Price": {
-     "type": "cds.Decimal",
-     "precision": 7,
-     "scale": 2,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "PriceUnit": {
-     "type": "cds.Integer",
-     "@sap.unicode": "false",
-     "@sap.label": "Signed INT2 / int16",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Quantity": {
-     "type": "cds.Integer",
      "@sap.unicode": "false",
      "@sap.creatable": "false",
      "@sap.updatable": "false",
@@ -2675,7 +329,7 @@
     }
    }
   },
-  "sap_metadata_edmx.UserSet": {
+  "StoreTasks.ArticleImageSet": {
    "kind": "entity",
    "@cds.external": true,
    "@cds.persistence.skip": true,
@@ -2686,50 +340,7 @@
    "@sap.addressable": "false",
    "@sap.content.version": "1",
    "elements": {
-    "ID": {
-     "key": true,
-     "type": "cds.String",
-     "length": 10,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Name": {
-     "type": "cds.LargeString",
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    },
-    "Type": {
-     "type": "cds.String",
-     "length": 1,
-     "@sap.unicode": "false",
-     "@sap.creatable": "false",
-     "@sap.updatable": "false",
-     "@sap.sortable": "false",
-     "@sap.filterable": "false",
-     "notNull": true
-    }
-   }
-  },
-  "sap_metadata_edmx.ArticleImageSet": {
-   "kind": "entity",
-   "@cds.external": true,
-   "@cds.persistence.skip": true,
-   "@sap.creatable": "false",
-   "@sap.updatable": "false",
-   "@sap.deletable": "false",
-   "@sap.pageable": "false",
-   "@sap.addressable": "false",
-   "@sap.content.version": "1",
-   "elements": {
-    "Filename": {
+    "FileName": {
      "key": true,
      "type": "cds.String",
      "length": 18,
@@ -2748,6 +359,2197 @@
      "@sap.updatable": "false",
      "@sap.sortable": "false",
      "@sap.filterable": "false"
+    },
+    "blob": {
+     "type": "cds.LargeBinary",
+     "@Core.MediaType": "application/octet-stream"
+    }
+   }
+  },
+  "StoreTasks.SurveyTaskSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SurveyGuid": {
+     "type": "cds.String",
+     "length": 13,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Status": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Type": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ChangedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ChangedBy": {
+     "type": "cds.String",
+     "length": 12,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ValidFrom": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ValidTo": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "InternalName": {
+     "type": "cds.String",
+     "length": 35,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Name": {
+     "type": "cds.String",
+     "length": 35,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Description": {
+     "type": "cds.String",
+     "length": 150,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "PrefaceQuestion": {
+     "type": "cds.String",
+     "length": 80,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "PrefaceAnswered": {
+     "type": "cds.Boolean",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ReviewRequired": {
+     "type": "cds.Boolean",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DelayDays": {
+     "type": "cds.Integer",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CurrentAttempt": {
+     "type": "cds.Integer",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "NumberOfAttempts": {
+     "type": "cds.Integer",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Categories": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.SurveyTaskCategorySet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Categories",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Categories",
+        "TaskId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskId"
+       ]
+      }
+     ]
+    },
+    "Questions": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.SurveyTaskQuestionSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Questions",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Questions",
+        "TaskId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskId"
+       ]
+      }
+     ]
+    },
+    "Attachments": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.SurveyTaskAttachmentSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Attachments",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Attachments",
+        "TaskId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskId"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "StoreTasks.SurveyTaskAttachmentSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "FileType": {
+     "key": true,
+     "type": "cds.String",
+     "length": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SurveyGuid": {
+     "type": "cds.String",
+     "length": 13,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "FileName": {
+     "type": "cds.String",
+     "length": 50,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MimeType": {
+     "type": "cds.LargeString",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "blob": {
+     "type": "cds.LargeBinary",
+     "@Core.MediaType": "application/octet-stream"
+    }
+   }
+  },
+  "StoreTasks.SurveyTaskQuestionSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CategoryId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "QuestionId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SurveyGuid": {
+     "type": "cds.String",
+     "length": 13,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "QuestionType": {
+     "type": "cds.String",
+     "length": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ShortText": {
+     "type": "cds.String",
+     "length": 15,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Answer": {
+     "type": "cds.String",
+     "length": 255,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Sequence": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MinValue": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MaxValue": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SelectableAnswer": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "QuestionIdDependency": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "AnswerIdDependency": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "AcceptDecimals": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DecimalPlaces": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Status": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ChangedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ChangedBy": {
+     "type": "cds.String",
+     "length": 12,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ReviewRequired": {
+     "type": "cds.Boolean",
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "RejectionComments": {
+     "type": "cds.String",
+     "length": 255,
+     "@sap.label": "",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Attachments": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.SurveyTaskQuestionAttachmentSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Attachments",
+        "QuestionId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "QuestionId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Attachments",
+        "CategoryId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "CategoryId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Attachments",
+        "TaskId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Attachments",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      }
+     ]
+    },
+    "Answers": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.SurveyTaskAnswerSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Answers",
+        "QuestionId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "QuestionId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Answers",
+        "CategoryId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "CategoryId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Answers",
+        "TaskId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Answers",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "StoreTasks.SurveyTaskQuestionAttachmentSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CategoryId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "QuestionId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SequenceId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 14,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Sequence": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "FileName": {
+     "type": "cds.String",
+     "length": 70,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SurveyGuid": {
+     "type": "cds.String",
+     "length": 13,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "FileType": {
+     "type": "cds.String",
+     "length": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CreatedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CreatedBy": {
+     "type": "cds.String",
+     "length": 12,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MimeType": {
+     "type": "cds.LargeString",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "blob": {
+     "type": "cds.LargeBinary",
+     "@Core.MediaType": "application/octet-stream"
+    }
+   }
+  },
+  "StoreTasks.SurveyTaskAnswerSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CategoryId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "QuestionId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "AnswerId": {
+     "key": true,
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SurveyGuid": {
+     "type": "cds.String",
+     "length": 13,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Sequence": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 80,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.SurveyTaskCategorySet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CategoryId": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SurveyGuid": {
+     "type": "cds.String",
+     "length": 13,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Sequence": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 80,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Questions": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.SurveyTaskQuestionSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Questions",
+        "CategoryId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "CategoryId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Questions",
+        "TaskId"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskId"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Questions",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "StoreTasks.CountHeaderSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Date": {
+     "key": true,
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Store": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Status": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ChangedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ChangedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.CountTypeSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Id": {
+     "key": true,
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 30,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.CountSubtypeSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Id": {
+     "key": true,
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "HideText": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DisplayInventory": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Instruction": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 30,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.CountArticleSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "CountID": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.label": "Count ID",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Store": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Number": {
+     "key": true,
+     "type": "cds.String",
+     "length": 18,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "LabelNumber": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "HasImage": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CountType": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CountSubtype": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CountStatus": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "YesNoCount": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ReviewType": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MerchandiseCategory": {
+     "type": "cds.String",
+     "length": 9,
+     "@sap.label": "Material Group",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Department": {
+     "type": "cds.String",
+     "length": 9,
+     "@sap.label": "Material Group",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 40,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DefaultUPC": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "UPCs": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Status": {
+     "type": "cds.String",
+     "length": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "OneShot": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "InventoryQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "RetailPrice": {
+     "type": "cds.Decimal",
+     "precision": 7,
+     "scale": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Currency": {
+     "type": "cds.String",
+     "length": 5,
+     "@sap.label": "Currency",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "@sap.semantics": "currency-code",
+     "notNull": true
+    },
+    "InStock": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MinimumSafetyStock": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "HasInventoryDiscrepancy": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "NeedReplenishment": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SkippedUPCScan": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SalesFloorCountedStatus": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SalesFloorCountedQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SalesFloorCountedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "SalesFloorCountedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.label": "QtyA Counted By",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "BackstoreCountedStatus": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "BackstoreCountedQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "BackstoreCountedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "BackstoreCountedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.label": "QtyB Counted By",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ApprovedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ApprovedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.label": "Approved By",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ChangedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ChangedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ChangedByName": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.TaskSubtypeSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "Type": {
+     "key": true,
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Subtype": {
+     "key": true,
+     "type": "cds.String",
+     "length": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Name": {
+     "type": "cds.String",
+     "length": 20,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Instruction": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DiscrepancyQuantity": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DiscrepancyPercentage": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.ArticleTaskSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskID": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Subtype": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ValidFrom": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ValidTo": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Instruction": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "HasInstructionPDF": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MandatoryInstruction": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ReviewType": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Status": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ArticleNumber": {
+     "type": "cds.String",
+     "length": 18,
+     "@sap.label": "Material",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ArticleDescription": {
+     "type": "cds.String",
+     "length": 40,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "LabelNumber": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "IsPUM": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ContentUnit": {
+     "type": "cds.String",
+     "length": 3,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SeasonCategory": {
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MerchandiseCategory": {
+     "type": "cds.String",
+     "length": 9,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Department": {
+     "type": "cds.String",
+     "length": 9,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "DefaultUPC": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Upcs": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "InventoryQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Price": {
+     "type": "cds.Decimal",
+     "precision": 7,
+     "scale": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "PriceUnit": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "OldPrice": {
+     "type": "cds.Decimal",
+     "precision": 7,
+     "scale": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "OldPriceUnit": {
+     "type": "cds.Integer",
+     "@sap.label": "Signed INT2 / int16",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "PricePUM": {
+     "type": "cds.Decimal",
+     "precision": 7,
+     "scale": 2,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "IsPrintable": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SalesFloorCountedQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SalesFloorCountedStatus": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "BackstoreCountedQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "BackstoreCountedStatus": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "HasInventoryDiscrepancy": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "SkippedScan": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "StartedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "StartedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CompletedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "CompletedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ApprovedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ApprovedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "ChangedOn": {
+     "type": "cds.DateTime",
+     "@odata.Type": "Edm.DateTimeOffset",
+     "@sap.label": "Time Stamp",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false"
+    },
+    "ChangedBy": {
+     "type": "cds.String",
+     "length": 8,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Assortments": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.TaskAssortmentSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Assortments",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Assortments",
+        "TaskID"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskID"
+       ]
+      }
+     ]
+    },
+    "Attachments": {
+     "@cds.ambiguous": "missing on condition?",
+     "type": "cds.Association",
+     "target": "StoreTasks.TaskAttachmentSet",
+     "cardinality": {
+      "max": "*"
+     },
+     "on": [
+      {
+       "ref": [
+        "Attachments",
+        "TaskID"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "TaskID"
+       ]
+      },
+      "and",
+      {
+       "ref": [
+        "Attachments",
+        "StoreNumber"
+       ]
+      },
+      "=",
+      {
+       "ref": [
+        "StoreNumber"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  "StoreTasks.TaskAssortmentSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskID": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "AssortmentCode": {
+     "key": true,
+     "type": "cds.String",
+     "length": 3,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Text": {
+     "type": "cds.String",
+     "length": 30,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "HasPhoto": {
+     "type": "cds.Boolean",
+     "@sap.label": "Indicator",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CountedQuantity": {
+     "type": "cds.Integer",
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "CountedStatus": {
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "mimeType": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "blob": {
+     "type": "cds.LargeBinary",
+     "@Core.MediaType": "application/octet-stream"
+    }
+   }
+  },
+  "StoreTasks.TaskTypeSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "ID": {
+     "key": true,
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "Name": {
+     "type": "cds.String",
+     "length": 20,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    }
+   }
+  },
+  "StoreTasks.TaskAttachmentSet": {
+   "kind": "entity",
+   "@cds.external": true,
+   "@cds.persistence.skip": true,
+   "@sap.creatable": "false",
+   "@sap.updatable": "false",
+   "@sap.deletable": "false",
+   "@sap.pageable": "false",
+   "@sap.addressable": "false",
+   "@sap.content.version": "1",
+   "elements": {
+    "StoreNumber": {
+     "key": true,
+     "type": "cds.String",
+     "length": 4,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "TaskID": {
+     "key": true,
+     "type": "cds.String",
+     "length": 10,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "AttachmentType": {
+     "key": true,
+     "type": "cds.String",
+     "length": 1,
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
+    },
+    "MimeType": {
+     "type": "cds.LargeString",
+     "@sap.creatable": "false",
+     "@sap.updatable": "false",
+     "@sap.sortable": "false",
+     "@sap.filterable": "false",
+     "notNull": true
     },
     "blob": {
      "type": "cds.LargeBinary",

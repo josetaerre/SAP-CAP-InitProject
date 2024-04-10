@@ -29,9 +29,19 @@
           "database": "complaint.db"
         }
       },
-      "sap_metadata_edmx": {
+      "StoreTasks": {
         "kind": "odata-v2",
-        "model": "srv/external/sap-metadata-edmx"
+        "model": "srv/external/StoreTasks",
+        "[development]": {
+          "credentials": {
+            "destination": "devDestination"
+          }
+        },
+        "[production]": {
+          "credentials": {
+            "destination": "prdDestination"
+          }
+        }
       }
     }
   },
