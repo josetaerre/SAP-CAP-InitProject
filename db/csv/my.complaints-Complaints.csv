@@ -1,0 +1,7 @@
+ID,TITLE,STATUS,store_ID,mediaFiles_ID
+10000000101,Dirty alleys,1, 1001,null
+10000000102,No bathrooms in stores,2, 1002,null
+10000000118,Goods too expensive,4, 1002,null
+10000000124,Not enough cashiers,2,2001,null
+10000000105,System is too slow,3,2001,null
+10000000106,Drinks are not cold enough,3,1001,null

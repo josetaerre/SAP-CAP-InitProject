@@ -1,4 +1,5 @@
 ID,DESCRIPTION
-1,Accepted
-2,Rejected
-3,In Review
+1,Created
+2,Assigned to be reviewed
+3,Solved
+4,Rejected
