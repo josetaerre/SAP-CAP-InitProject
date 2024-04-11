@@ -1,4 +1,4 @@
-ID,TITLE,STATUS,store_ID,mediaFiles_ID
+ID,TITLE,status_ID,store_ID,mediaFiles_ID
 10000000101,Dirty alleys,1, 1001,null
 10000000102,No bathrooms in stores,2, 1002,null
 10000000118,Goods too expensive,4, 1002,null

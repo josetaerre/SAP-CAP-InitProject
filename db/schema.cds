@@ -11,7 +11,7 @@ using { Language } from '@sap/cds/common';
 entity Complaints: managed {
     key id : Identifier;
     title       : String;
-    status      : Int16;
+    status      : Association to one Status;
     store       : Association to one Stores;
     mediaFiles  : Association to many Media;
     resolutions : Association to many Resolutions on resolutions.complaint = $self;
@@ -54,5 +54,7 @@ entity Stores {
 entity Status {
     key ID: Int16;
     description: String;
-    Language: Language
+    language: Language;
+    complaintStatus : Association to many Complaints on complaintStatus.status = $self;
+
 }
