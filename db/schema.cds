@@ -6,7 +6,7 @@ using { Language } from '@sap/cds/common';
 // type Currency : Association to sap.common.Currencies;
  type storeId : String(4);
  type Identifier: String(10);
- type Item: Int16;
+//  type Item: Int16;
 
 entity Complaints: managed {
     key id : Identifier;
